@@ -1,1 +1,50 @@
-<!--  -->
+<!-- 
+ 
+++++++
+111 - Docker
+++++++
+
+ Docker is a software development platform to deploy apps
+ - apps are packaged in containers that can be run on any OS
+- apps run the same regardless of where they're run
+- scale containers up and down very quickly (in seconds)
+
+Docker Images
+- create docker images to run containers
+- docker images are store in docker repositories
+- repositories
+    - public repo called Docker Hub
+         - you can find the base images for many technologies or OS here
+    - private
+         - Amazon ECR (Elastic Container Registry)
+
+Docker VS Virtual Machines
+
+EC2 has infrastructure, host OS, hypervisor, and each ec2 instance has the application onto the guest OS, 
+
+docker - infrastrucutre, host OS (ec2 instance), docker daemon, and many different containers running without needing their own guest OS = more lightweight, easy to run & scale
+
+++++++
+112 - ECS, Fargate & ECR Overview
+++++++
+
+- ECS
+    - Elastic Container Service
+    - used to launch docker containers on AWS
+    - must create infrastructure in advance & maintain it (the EC2 instances)
+    - AWS takes care of starting & stopping containers (smart enoguh to find WHICH ECS instance to place new containers)
+    - has integrations iwth the Application Load Balancer
+
+    - Fargate
+        - used to launch Docker containers on AWS
+        - do NOT provide infrastrucure (no EC2 instances to manage)
+        - Serverless offering
+        - AWS runs containers based on your needs - the CPU/RAM you require
+
+    - ECR
+        - Elastic Container Registry
+        - used to store your Docker images so they can be run by ECS or Fargate
+        - a private Docker registry on AWS
+        - 
+
+ -->
