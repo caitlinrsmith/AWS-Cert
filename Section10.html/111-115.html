@@ -54,10 +54,35 @@ docker - infrastrucutre, host OS (ec2 instance), docker daemon, and many differe
 114 - Lambda Overvew
 ++++++
 
-- virtual servers in the cloud
-- limited by RAM and CPU power we give it
-- continuously running
-- in order to scale, we need to add or remove servers over time (which can be slow or complicated, although it can be done using an auto scaling group, however)
-- 
+Amazon EC2 has"
+    - virtual servers in the cloud
+    - limited by RAM and CPU power we give it
+    - continuously running
+    - in order to scale, we need to add or remove servers over time (which can be slow or complicated, although it can be done using an auto scaling group, however)
 
+Amazon Lambda has:
+    - virtual functions (no servers to manage)
+    - limited by time - intended for short executions
+    - runs on-demand
+    - scaling is automated
+
+Benefits of AWS Lambda:
+
+Easy Pricing
+    - pay per request & compute time
+    - free tier is very generous (1 million Lambda requests & 400k GBs of compute time)
+    - integrated with the whole AWS suite of services
+    - Event-Driven - functions get invoked by AWS when needed (a reactive service)
+    - integrated with many programming languages
+    - easy monitoring through AWS Cloud Watch (a monitoring solution in AWS)
+    - Easy to ger more resources per functions (up to 10GB of RAM)
+    - Increasing RAM will also improve CPU and network quality
+    - Language Support
+        - Node.js(javascript), Python, Java, C#(.NET Core or PowerShell), Ruby, Custom Runtime API (community supported, ex: Rust or Golang)
+    - can implement container images - Lambda Container Image
+        - the container must implement the Lambda Runtime API
+        - ECS/Fargate is preferred for running arbitrary Docker images (even tho Lambda offers SOME support for customized Docker images)
+
+Very Common Use CAse of LAmbda: Serverless Thumbnail Creation
+    - 
  -->
