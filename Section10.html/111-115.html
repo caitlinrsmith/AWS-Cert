@@ -68,14 +68,17 @@ Amazon Lambda has:
 
 Benefits of AWS Lambda:
 
-Easy Pricing
-    - pay per request & compute time
-    - free tier is very generous (1 million Lambda requests & 400k GBs of compute time)
+    -Easy Pricing
+        - pay per request & compute time
+        - free tier is very generous (1 million Lambda requests & 400k GBs of compute time)
+         - pricing 
+            - is based on calls and duration
+            - is VERY cheap to run so makes Lambda VERY popular
     - integrated with the whole AWS suite of services
     - Event-Driven - functions get invoked by AWS when needed (a reactive service)
     - integrated with many programming languages
     - easy monitoring through AWS Cloud Watch (a monitoring solution in AWS)
-    - Easy to ger more resources per functions (up to 10GB of RAM)
+    - Easy to get more resources per functions (up to 10GB of RAM)
     - Increasing RAM will also improve CPU and network quality
     - Language Support
         - Node.js(javascript), Python, Java, C#(.NET Core or PowerShell), Ruby, Custom Runtime API (community supported, ex: Rust or Golang)
@@ -83,6 +86,25 @@ Easy Pricing
         - the container must implement the Lambda Runtime API
         - ECS/Fargate is preferred for running arbitrary Docker images (even tho Lambda offers SOME support for customized Docker images)
 
-Very Common Use CAse of LAmbda: Serverless Thumbnail Creation
-    - 
+Very Common Use Case of LAmbda: 
+    Serverless Thumbnail Creation
+        - users upload img into an S3 bucket
+        - the img upload triggers a Lambda Function to create a thumbnail
+        - it will push the thumbnail back to the S3 bucket AND/OR push metadata about the img in to DynamoDB
+        - all of this is completely event-driven and serverless (DynamoDB, S3, and Lambda you don't provision servers)
+            - this means app will scale really well
+    Serverless CRON Job
+        - you can define a schedule to run a script
+        - by default CRON jobs are run on Linux AMI (Linux machine)
+        - CloudWatchEvents EventBridge is a serverless way to run CRON Jobs without provisiioning an EC2 instance
+
+115 - Lambda Hands-on
+    - deploy changes by clicking deploy
+    - test (functions) with the test button
+    - errorType: Exception is an error
+    - CloudWatch Logs to understand where the error happened, run time, billed time, etc
+    - Runtime Settings
+    - you can see the file and function name that Lamba is told to invoke
+    -  Permissions - a role was created by the Lambda Console to write to CloudWatch Logs to create logstreams, etc.
+
  -->
