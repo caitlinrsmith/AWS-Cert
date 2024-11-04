@@ -36,6 +36,23 @@ Batch VS Lambda
     Batch: 
     - no time limit
     - any runtime as long as it's packaged as a Docker image
-    - rely on EBS/instance store for disk space
-    
+    - rely on EBS/instance store for disk space (which can be a lot more than for Lambda functions)
+    - NOT serverless - rely on EBS/instance store for disk space
+    - relies on EC2 (can be managed by AWS)
+
+118 . Amazon Lightsail
+ on the exam: Why lightsail? for someone w no cloud experience, low and predictable pricing and don't have to configure many things = Lightsail
+
+- Virtual servers, storage, databases, and networking all in one place
+- low and predictable pricing
+- Simpler alternative compared to using EC2, RDS, ELB, EBS, Route 53, etc
+- great fo rppl w little cloud experience!
+- can setup notifications and monitoring of your Lightsail resources
+- has high availability but no auto-scaling, limited AWS integrations
+
+use cases: 
+- simple web apps (has templates for LAMP, Nginx, MEAN, Node.js, etc)
+- Websites (Wordpress, Magento, Plesk, Joomla)
+- Dev/Test environment
+
  -->
