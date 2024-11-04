@@ -1,1 +1,38 @@
-<!--  -->
+<!-- 
+ 121. Deploying and Managing Infrastructure at Scale
+
+ - What is CloudFormation?
+    CloudFormation is going to be used when we have infrastructure as code, when we need to repeat an arhitecture in different environments, different regions, or even different AWS accounts
+    - CloudFormation is a declarative way of outlining your AWS Infrastructure, for any resources (most of them are supported)
+    EX: within a CloudFormation template, you say"
+        I want a security group
+        I want two EC2 instances using this security group
+        I want an S3 bucket
+        I want a load balancer (ELB) in front of these machines
+    then CLoudFormation creates those for you, in the RIGHT ORDER, with the EXACT CONFIGURATION that you specify
+
+    Benefits: 
+    - Infrastructure is as code (never create resources manually)
+    - changes to infrastructure are reviewd through code reviews, which creates a safety net
+    cost benefits:
+    - each resource within the stack is tagged with an identifier so you can easily see how much a stack costs you
+    - you can easily estimate the cost of your resources using the CloudFormation template
+    - Savings strategy: in some environemtn you can automate the deletion of templates at 5pm and recreate them at 8am safely, you don't have any resources during that time which leads to costs savings
+    productivity: 
+        - ability to destroy and recreate an infrastructure on the cloud on the fly
+        - automated generation of diamgrams for your templates
+        - declarative programming (no need to figure out ordering and orchestration)
+    don't reinvent the wheel:
+        - leverage existing templates on the web
+        - leverage existing documentation
+    support almost all AWS resources
+        - you can use "custom resources" for resources that are not supported
+
+CloudFormaion + Application Composer
+visualize a CloudFormation template using the Application Composer service
+    EX: WordPress CloudFormation Stack
+
+    122. CloudFormation Hands On
+
+    123. CDK Overview
+ -->
