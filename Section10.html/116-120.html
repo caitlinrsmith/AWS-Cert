@@ -1,1 +1,41 @@
-<!--  -->
+<!-- 
+116.  Amazon API Gateway
+
+ how to create a serverkess API = API Gatewat + Lambda
+
+ - using Lambda to perform CRUD operations on data from DynamoDB but we want external clients to access our Lambda function. 
+ - need to expose our Lambda function as an API through an API gateway, which gives the client a rest HTTP API to connect directly to my website
+
+ client (comp) talks to the API gateway, which proxies requests to the Lambda function, which executes changes on the data in DynamoDB
+
+ features
+ - fully managed service for developers to easily create, publish, maintain, monitor, and secure APIs
+ - serverless and scalable
+ - supports RESTful APIs and Websocket APIs
+- suports security, user auth, API throttling, API keys, monitoring, etc
+
+117. AWS Batch
+
+- fully managed batch processing at any scale
+- efficiently run 100,000s of computing jobs on AWS
+- a "batch" job is a job with a set start time and end time
+- Batch wil dynamically launch EC2 instances or Spot instances as needed, this leads to
+- cost optimizations and focusing less on the infrastructure
+- AWS Batch provisions the right amount of compute/memory
+- just submit or schedule batch jobs and AWS Batch does the rest!
+- batch jobs are defined as Docker images and run on ECS
+
+Batch VS Lambda
+
+    Lambda
+    - time limit of 15 mins
+    - can only access a few progmramming languages
+    - limited temporary disk space
+    - serverless
+
+    Batch: 
+    - no time limit
+    - any runtime as long as it's packaged as a Docker image
+    - rely on EBS/instance store for disk space
+    
+ -->
