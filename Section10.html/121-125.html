@@ -46,5 +46,30 @@ visualize a CloudFormation template using the Application Composer service
             - great for Docker containers in DCS/EKS
         - why use a familiar programming language?
             - can use type safety, constructs, to complete the project faster, to reuse some code, have for loops, etc. 
+    126. Beanstalk Overview
+        - when we deploy a web app in AWS it usually follows a 3-tier architecture
+            1) 
+            users talk to a load balancer tha can be in multiple availability zones
+            2) 
+            the load balancer forwards traffic to multiple EC2 instances, managed by an autoscaling group
+            3) 
+            - EC2 instances store data in a database such as Amazon RDS
+            - ElastiCache to store/retrieve session data + Cached data
+        - we can easily reproduce this architecture manually or on AWS through CloudFormation, but a better way is to use 
+        - Developer Problems on AWS
+            - don't want to managing infrastructure
+            - dont want to configure all the databases, load balancer, etc
+            - just want to delpoy code & ensure project is scalable
         
+        - most web apps have the same architecture -- ALB (load balancer) + ASG (auto scaling group)
+        - all the develoeprs want is for their code to run! and possibly, consinstently run across different applications and environments
+    
+    Elastic Beanstalk is a developer centric view of deploying an application on AWS
+
+    - Beanstalk = Platform as a Service (PaaS)
+    - it uses all the componenets we've seen before: EC2, ASG, ELB, RDS, etc..
+    - but it's all in one view that's easy to make sense of!
+    - & we still have full control over the configuration of all the components
+
+
  -->
