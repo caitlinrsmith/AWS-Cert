@@ -1,0 +1,59 @@
+<!--    126. Beanstalk Overview
+        - when we deploy a web app in AWS it usually follows a 3-tier architecture
+            1) 
+            users talk to a load balancer tha can be in multiple availability zones
+            2) 
+            the load balancer forwards traffic to multiple EC2 instances, managed by an autoscaling group
+            3) 
+            - EC2 instances store data in a database such as Amazon RDS
+            - ElastiCache to store/retrieve session data + Cached data
+        - we can easily reproduce this architecture manually or on AWS through CloudFormation, but a better way is to use 
+        - Developer Problems on AWS
+            - don't want to managing infrastructure
+            - dont want to configure all the databases, load balancer, etc
+            - just want to delpoy code & ensure project is scalable
+        
+        - most web apps have the same architecture -- ALB (load balancer) + ASG (auto scaling group)
+        - all the develoeprs want is for their code to run! and possibly, consinstently run across different applications and environments
+    
+        Elastic Beanstalk is a developer centric view of deploying an application on AWS
+
+        - Beanstalk = Platform as a Service (PaaS)
+        - it uses all the componenets we've seen before: EC2, ASG, ELB, RDS, etc..
+        - but it's all in one view that's easy to make sense of!
+        - & we still have full control over the configuration of all the components
+        - Elastic Beanstalk is free but you pay for the underlying instances
+        - Elastic Beanstalk is a managed service
+            - instance configuration/OS is handled by Beanstalk
+            - deployment strategy is configurable but performed by Elastic Beanstalk
+            - load balancing * autoscaling by Beanstalk
+            - Application health-monitoring & responsiveness by Beanstalk
+            - just the application code is the responsibility of the developer
+
+            - three architecture models:
+                - single instance deployment = good for dev
+                - LB + ASG: great for production or pre-production web applications
+                - ASG only: great for non-web apps in production (workers etc.)
+            
+        Support for many platforms
+            - Go, Java SE, Java with Tomcat, etc. more examples listed in the lecture
+        
+        Elastic Beanstalk - Health Monitoring
+            - health agent pushes metrics to CloudWatch
+            - Checks for app health, publushes health events
+
+    127. Beanstalk Hands-ON
+
+    128. AWS CodeDeploy
+        - a way to deploy our application automatically
+        - completely independent, doens't need to use Beanstalk or CloudFormation
+        - if we have version 1 and want to deploy Version 2, CodeDeploy will find a way to do this for us automatically & from a single interface
+        - CodeDeploy works with EC2 instances & On-premises Servers
+        - HYBRID service - because it works with On-Premises & EC2 instances
+        - Servers/Instances must be provisioned & configured ahead of time with the CodeDeploy agent
+    
+        129. CodeCommit - DEprecated 
+            - assume there is a GitHub integration in place of CodeCommit
+            
+            
+            -->
