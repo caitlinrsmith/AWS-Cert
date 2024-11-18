@@ -1,0 +1,48 @@
+<!-- 
+ 131. AWS CodebBuild
+    - Code building service in the cloud
+    - compiles source code, runs tests, and produces packages that are ready to be deployed )by CodeDeploy for example)
+    - retrieves the code from GitHub or another source, run some scripts that we have to define, build the code, and have ready-to-deploy artifacts
+
+    Benefits: 
+        - Fully managed, serverless
+        - continuously scalable & highly available
+        - secure
+        - pay-as-you-go pricing -- only pay for the build time
+
+132. AWS CodePipeline
+    - can connect GitHub or other competitor to CodeBuild
+    - orchestrate the different steps to have the code automatically pushed to production
+    - Code => Build => Test => Provision Servers => Deploy app on those servers
+    - Basis for CICD (Continuous Integration & Continuous Delivery)
+    
+    Benefits:
+        - fully managed, compatible with GitHub, CodeBuild, CodeDeploy, Elastic Beanstalk, CloudFormation, 3rd-party servies (Github for example) & custom plugins
+        - fast delivery & rapid updates
+133. CodeArtifact
+    - used for an artifact management system, or a place to store code dependencies
+    - software packages depend on each other to be built (also called code dependencies), and new ones are created
+    - storing & retrieving these dependencies is called artifact management
+    - traditionally you need to setup your own artifact management system
+    - CodeArtifact is a secure, scalable, and cost-effective artifact management for software development
+    - Works with common dependency management tools such as Maven, Gradle, npm, yarn, twine, and NuGet
+    - Developers and CodeBuild can then retrieve dependencies straight from CodeARtifact
+
+134. AWS Systems Manager (SSM)
+    - EXAM PERSPECTIVE = a way to patch your fleet of EC2 instances or on-premises servers = SSM or if you wanted to run a command consistently across all servers = SSM 
+    - Helps you manage your EC2 and On-premises systems at scale
+    - HYBRID service
+    - get operational insights about the state of your infrastructure
+    - access to a suite of 10+ products
+        - most important geatures are:
+            - patching automation for enhanced compliance
+            - run commands across an entire fleet of servers
+            - store parameter configuration with the SSM parameter store
+    - works for Linux, Windows, MacOS, and Raspberry Pi OS (Raspbian)
+
+    How Systems Manager Works
+        - need to install the SSM Agent onto the systems we control
+        - installed by default on Amazon Linux AMI & some Ubuntu AMI
+        - if an instance can't be controlled with SSM, it's probably an issue with the SSM agent!
+        - finally, thanks to the SSM agent, we can run commands and patch all of our servers at once & configure servers consistently
+-->
