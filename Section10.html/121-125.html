@@ -84,7 +84,7 @@ visualize a CloudFormation template using the Application Composer service
                 - ASG only: great for non-web apps in production (workers etc.)
             
         Support for many platforms
-            - Go, Java SE, JAva with Tomcat, etc. more examples listed in the lecture
+            - Go, Java SE, Java with Tomcat, etc. more examples listed in the lecture
         
         Elastic Beanstalk - Health Monitoring
             - health agent pushes metrics to CloudWatch
@@ -92,4 +92,15 @@ visualize a CloudFormation template using the Application Composer service
 
     127. Beanstalk Hands-ON
 
+    128. AWS CodeDeploy
+        - a way to deploy our application automatically
+        - completely independent, doens't need to use Beanstalk or CloudFormation
+        - if we have version 1 and want to deploy Version 2, CodeDeploy will find a way to do this for us automatically & from a single interface
+        - CodeDeploy works with EC2 instances & On-premises Servers
+        - HYBRID service - because it works with On-Premises & EC2 instances
+        - Servers/Instances must be provisioned & configured ahead of time with the CodeDeploy agent
+    
+        129. CodeCommit - DEprecated 
+            - assume there is a GitHub integration in place of CodeCommit
+            
  -->
