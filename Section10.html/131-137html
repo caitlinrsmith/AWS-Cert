@@ -47,11 +47,23 @@
         - finally, thanks to the SSM agent, we can run commands and patch all of our servers at once & configure servers consistently
 
 135. SSM Session Manager
-
+    - Session MAnager is a way to access our Linux and Windows instances
     - Allows you to start a secure shell on your EC2 and on-premises servers
     - No SSH access, bastion hosts, or SSH keys needed
     - No port 22 needed (better security)
-    - 
+    - Supports Linux, macOS, and Windows
+    - Send session log data to S3 or CloudWatch logs
+    
+    Fleet Manager - a service where all the EC2 instances that are registered will appear there, they are called "managed nodes"
+    
+136. SSM PArameter Store
 
+    - a way to secure storage for configuation and secrets securely
+    - you can store anything, such as API keys, passwords, configurations, etc
+    - Serverless, scalable, durable, easy SDK
+    - control access permissions using IAM
+    - version tracking & (optional) encryption
+    - a secure string is used to encrypt sensitice data using KMS keys from your account or another network
+    
 
 -->
