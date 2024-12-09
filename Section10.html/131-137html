@@ -71,6 +71,17 @@
 
     - a global application is an application deployed in multiple lcoations
     - on AWS: this could be Regions and / or Edge Locations
+    - decreased ;atency
+        - latency is the time it takes for a network packet to reach a server
+    - Disaster REcovery (DR)
+        - if an AWS region goes down (earthquake, storms, power shutdown, politics)...
+    - you can fail-over to another region and have your application still working
+    - a DR plan is important to increase the availability of your application
+    - Attack protection: distributed global infrastructre is harder to attack
 
-    
+    Global AWS Infrastructure
+        - Regions: for deploying applications and infrastructure
+        - Availability Zones: MAde of multiple data centers
+        
+
 -->
