@@ -64,6 +64,13 @@
     - control access permissions using IAM
     - version tracking & (optional) encryption
     - a secure string is used to encrypt sensitice data using KMS keys from your account or another network
-    
 
+137. Deployment Summary
+
+138. Why make a global application?
+
+    - a global application is an application deployed in multiple lcoations
+    - on AWS: this could be Regions and / or Edge Locations
+
+    
 -->
